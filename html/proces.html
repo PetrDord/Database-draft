@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Návrch Relační Databáze</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <button class="toggel" aria-controls="navig" aria-expanded="false"><span class="sr-only">&#9776</span></button>
+      <nav>
+        <ul id="navig" data-visible="false" class="links">
+          <li><a class="link" href="../home.html" >Home</a></li>
+          <li><a class="link" href="zaklady.html">Základy</a></li>
+          <li><a class="link" href="proces.html">Proces Návrhu</a></li>
+          <li><a class="link" href="dokonceni.html">Dokončení </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+<main>
+      <div class="text">
+      <h1>Co se v článku dozvíte ?</h1>
+        <ul class="obash">
+          <li><a href="">Zakladní zásady</a></li>
+          <li><a href="">Účel databáze</a></li>
+          <li><a href="">Vyhledání informacích</a></li>
+          <li><a href="">Rozdělení informacích do tabulek</a</li>
+          <li><a href="">Vytvoření relací</a></li>
+        </ul>
+        <div class="block">
+          <h2 id="2">Základní zásady</h2>
+          <p>Při vytváření aplikace, která pracuje s daty, je jedním z nejdůležitějších kroků správný návrh systému pro ukládání dat.
+            Pro ukládání dat, je nejlepší využít nějaký databázový systém, o kterých jsem si říkali na stránce Základy. Optimálním návrhem databáze se zabívá spousta teorií, ale pro běžné aplikace stačí pouze použít selský rozum a několik zásad.
+          </p>
+          <ol>
+            <li>Hodnoty v tabulkách by měli být nedělitelné.</li>
+            <li>Data by měla být ukládána do správných datových typů.</li>
+            <li>Jednotlivé záznamy by měli mít primární klíč, který je nezávislý na uložených datech.</li>
+            <li>Data kromě odkazů na primární klíč by měla být uložena pouze jednou.</li>
+          </ol>
+         </div> 
+        <div class="block"> 
+          <h2 id="1">Určení účelu databáze</h2>
+          <p>Nejdřív si musíme určit účel, pro který budem databázi vytvářet. Hlavně se jedná o to, jak databázi budeme používat a kdo ji bude používat.
+            Také by měl sloužit k určení informací, které budeme v databázi zaznamenávat. U malé databáze to může vypadat, třeba takto:"Databáze knihovny, uchovává informace o knihách, autorech a čtenářů za účelem vytvoření systému, který bude tato data vypisovat a zjišťovat, zda je kniha půjčena či nikoli."
+          </p>
+       </div>
+       <div class="block">
+        <h2 id="2">Vyhledáni informací</h2>
+        <p>Dalším krokem při návrhu je vytvořit seznam údajů, které budeme evidovat. Tyto údaje bývají součástí reálného světa a k nim vytváříme seznam informací, které tyto údaje obsahují. Jako příklad si opět můžeme vzít knihovnu; knihovna obashuje knihy a kniha má nějaké informace, které chceme zaznamenávat např. autora, počet stran, rok vydání, žánr... .
+       </div> 
+       <div class="block">
+         <h2>Rozdělení informacích do tabulek</h2>
+         <p>Další krok je určit jednotlivé entity (tabulky) databáze. Nejlepší je začít u entit, které plynou z předchozích kroků. Jako náš přiklad opět využiji lehkou databázi knihovny, takovou to databázi můžeme rozdělit na entity Kniha, Autor a Čtenář.
+           Tyto entity budou obsahovat atributy podle toho, co vše je potřeba evidovat. Můžeme si tyto atributy tabulek zapsat: </p>
+           <br>
+          <p>Kniha(nazev, počet stran, autora, žánr, popis ...)</p>
+          <br>
+          <p>Autor(jméno, příjmení, doba)</p>
+          <br>
+          <p>Čtenář(jméno, příjmení, telefon, email, ulice, číslo popisné, PSČ, město, datum narození) </p>
+          <br>
+          <p>Důvod proč ulice, číslo popisné, PSČ a město neukládáme pod jeden atribut; adresa, je aby jsme dodržely první zásadu při návrhu databáze - hodnoty mají být nedělitelné. Ten stejný důvod platí i pro jméno, které dělime na jméno a přijmení.</p>
+       </div>
+      
+    </div>
+</main>  
+<footer>
+    <ul class="Fmenu">
+      <li><a class="" href="../home.html">Home</a></li>
+      <li><a class="" href="zaklady.html">Základy</a></li>
+      <li><a class="" href="proces.html">Proces Návrhu</a></li>
+      <li><a class="" href="dokonceni.html" >Dokončení</a>
+      </li>
+    </ul>
+  
+  </div>
+</footer>
+<script src="../js/index.js"></script>
+</body>
+</html>
