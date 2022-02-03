@@ -61,7 +61,10 @@
           <br>
           <p>Čtenář(jméno, příjmení, telefon, email, ulice, číslo popisné, PSČ, město, datum narození) </p>
           <br>
-          <p>Důvod proč ulice, číslo popisné, PSČ a město neukládáme pod jeden atribut; adresa, je aby jsme dodržely první zásadu při návrhu databáze - hodnoty mají být nedělitelné. Ten stejný důvod platí i pro jméno, které dělime na jméno a přijmení.</p>
+          <p>Důvod proč ulice, číslo popisné, PSČ a město neukládáme pod jeden atribut; adresa, je aby jsme dodržely první zásadu při návrhu databáze - hodnoty mají být nedělitelné. Ten stejný důvod platí i pro jméno, které dělime na jméno a přijmení.
+            Podobný důvod je i proč jsme z autora udělami vlatní entitu. Kdyby byl autor atribut tak by se mohly jména autorů opakovat a to porušije naší 4 zásadu; data kromě klíčů by měla být uložena pouze jednou.
+          </p>
+          
        </div>
       
     </div>

@@ -33,9 +33,9 @@ list-style: none;
  z-index: 1000;
  transform: translateX(100%);
  transition: transform 350ms ease-in-out;
- display: flex;
- flex-direction: column;
- justify-content: space-around;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
 }
 .links[data-visible="true"]{
   transform: translateX(0%);
@@ -89,7 +89,7 @@ list-style: none;
     text-decoration: underline;
 }
 .text {
-  width: 80%;
+  width: 90%;
   font-size:37px;
 }
 
@@ -125,6 +125,14 @@ h3,h4,h5 {
 }
 .text ol li{
 margin-top: 2%;
+}
+.text ul{
+  color: rgb(63, 61, 61);
+  margin-left: 2%;
+  ;
+}
+.text ul li{
+  margin-bottom: 1%;
 }
 section{
   content: '';
@@ -187,7 +195,21 @@ footer .Fmenu  a:hover{
     text-decoration: underline;
     font-weight: bold;
 }
-
+.one{
+  content: url(../img/Mob1ku1.png);
+  width: 60%; 
+  height: 80%; 
+}
+.oneN{
+  content: url(../img/Mob1kuN.png);
+  width: 70%; 
+  height: 80%; 
+}
+.MN{
+  content: url(../img/MobMkuN.png);
+  width: 70%; 
+  height: 80%;
+}
 
 @media all and (min-width: 1000px){
   .links{
@@ -213,7 +235,7 @@ footer .Fmenu  a:hover{
     width: 70%;
   }
   .text {
-    width: 65%;
+    width:90%;
     font-size: 20px;
     display: grid;
     grid-gap: 2rem;
@@ -260,5 +282,21 @@ footer .Fmenu  a:hover{
   footer .contacts{
     font-size: 15px;
     line-height: 1.5;
+  }
+  .one{
+    content: url(../img/1ku1.png);
+   width: 489px;
+   height: 160px;
+
+  }
+  .oneN{
+    content: url(../img/1N.png);
+    width: 594px;
+   height: 204px;
+  }
+  .MN{
+    content: url(../img/MkuN.png);
+    width: 834px;
+   height: 160px;
   }
 }

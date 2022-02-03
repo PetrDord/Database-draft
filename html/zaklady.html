@@ -28,17 +28,19 @@
         </ul>
       <div class="block"> 
        <h2 id="1">Co je to databáze</h2>
-         <p>Databáze jsou místa, kam se ukládají data. Jednoduchým příkladem může být knihovna, kde jsou data uložena podle určitých pravidel a určitého systému. Pokud umíme tento systém používat, otevírají se nám možnosti, jak efektivně vyhledat data podle potřeby.<br>
+         <p>Databáze je uspořádána množina dat, tyto data jsou vzájemně propojené a jsou uložené na nějakém vnějším médiu. Součástí databáze
+           jsou i softwarové prostředky, které nám umožňují manipulaci s uloženými daty. Tento software se názývá systém řízení báze dat ve zkratce SŘBD.
+           Když spojíme SŘBD a databázy, vznikne nám tak znavý databázový systém. Databázový sýstem nám umožňuje shromažďovat, manipulavat, měnit, prohlížet a udržovat uložená data.
+         </p>
          <br>
-         To tedy znamená, že databáze a její systém slouží k definici dat, která mají být ukládána. Řeší vztahy mezi těmito daty, jakým způsobem je k nim možné přistupovat a jaké operace je s nimi možno provádět. Dále pak funguje jako systém pro řízení přístupu k informacím, řeší kdo má k jakým informacím přístup.<br>
-         <br>
-          Databázové systémy se nejčastěji využívají k propojení s různými aplikacemi, jako úložiště dat. Používají se, protože zaručují snadný a bezpečný přístup k informacím.
+         <p>Existuje spousta databozých modelu. Tyto modely se dělí podle toho jak ukládají data a vazby.
+           Např. máme databáze Hierarchické, Síťové, Objektové, ale nás bude zajímat pouze Relační databáze, protože se dnes nejpoužívanější.
          </p>
       </div>
       <div class="block">
        <h2 id="2">Relační databáze</h2>
-       <p>Relační databáze jsou nejpoužívanější datatáze dnes, kvůli tomu, že jsou snadno pochopitelné a jednoduché k sestrojení.
-        Je tu řada relačních databázových systému např. MySQL, Microsoft Access, MariaDB, Oracle, Firebird a další.
+       <p>Relační databáze jak již bylo řečeno jsou nejpoužívanější datatáze, a to  kvůli tomu, že jsou snadno pochopitelné a jednoduché k sestrojení.
+        Je tu řada relačních SŘBD např. MySQL, Microsoft Access, MariaDB, Oracle, Firebird a další.
         Pro webové aplikace je nejpoužívanější MySQL v kombinaci s programovacím jazykem PHP.
        </p>
        <h3>Prvky Relační Databáze:</h3>
@@ -48,8 +50,15 @@
         <img class ="tabulka"src="../img/fb.png" alt="etita(tabulka)">
        <h4>Sloupec tabulky (Atribut)</h4> 
         <p>Tabulky se dělí na sloupce a řádky. Sloupce zastupují vlatnosti kontrétní entity (u zamětnance jak mužete vidět v přikladu nahoře to jsou atributy jmeno, prijmeni, email, telefon...). Tyto vlastnosti také nazýváme <strong>atributy</strong>.
-        Každý atribut musí mít jednoznačný název, rozsah a datavý typ.</p>    
-        
+        Každý atribut musí mít jednoznačný název, rozsah a datavý typ.</p> 
+        <h5>Záklaní datové typy</h5>   
+        <ul>
+          <li>INT - Celé číslo</li>
+          <li>DOUBLE - Desetiná čísla</li>
+          <li>DATE - Datum ve formátu "RRRR-MM-DD"</li>
+          <li>VARCAHR - Text o délce max. 255 znaků</li>
+          <li>TEXT - Delčí texty</li>
+        </ul>
   
         <h4 >Řádky tabulky (záznamy)</h4>
         <p>Řádky tabulky neboli záznamy jsou jeden konkrétní výpis daných atributů např. u tabulky zákazník by záznam byl.</p>
