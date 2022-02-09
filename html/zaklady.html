@@ -30,7 +30,7 @@
        <h2 id="1">Co je to databáze</h2>
          <p>Databáze je uspořádána množina dat, tyto data jsou vzájemně propojené a jsou uložené na nějakém vnějším médiu. Součástí databáze
            jsou i softwarové prostředky, které nám umožňují manipulaci s uloženými daty. Tento software se názývá systém řízení báze dat ve zkratce SŘBD.
-           Když spojíme SŘBD a databázy, vznikne nám tak znavý databázový systém. Databázový sýstem nám umožňuje shromažďovat, manipulavat, měnit, prohlížet a udržovat uložená data.
+           Když spojíme SŘBD a databázi, vznikne nám tak znavý databázový systém. Databázový sýstem nám umožňuje shromažďovat, manipulavat, měnit, prohlížet a udržovat uložená data.
          </p>
          <br>
          <p>Existuje spousta databozých modelu. Tyto modely se dělí podle toho jak ukládají data a vazby.
@@ -57,15 +57,15 @@
           <li>DOUBLE - Desetiná čísla</li>
           <li>DATE - Datum ve formátu "RRRR-MM-DD"</li>
           <li>VARCAHR - Text o délce max. 255 znaků</li>
-          <li>TEXT - Delčí texty</li>
+          <li>TEXT - Delší texty</li>
         </ul>
-  
+         <p>Další datové typy mužete vidět <a href="https://www.promotic.eu/cz/pmdoc/Subsystems/Db/MySql/DataTypes.htm">zde</a>.</p>
         <h4 >Řádky tabulky (záznamy)</h4>
         <p>Řádky tabulky neboli záznamy jsou jeden konkrétní výpis daných atributů např. u tabulky zákazník by záznam byl.</p>
         <img class ="zaznam" src="../img/zaz.png"  alt="záznam">
         <h4>Klíče</h4>
         <h5>Primární klíč</h5>
-        <p>Primární klíč je atribut, který jednoznačně definuje jednotlivé záznamy. Obvykle bývá nějaké identifikační číslo, které se posouvá o jedno dopředu s každým záznamem. Jak vidíte na obrázku záznamu tak idZakazník je 1, to znamená že další záznam by byl idZakazník 2.</p>
+        <p>Primární klíč je atribut, který jednoznačně definuje jednotlivé záznamy. Obvykle bývá nějaké identifikační číslo, které se posouvá o jedno dopředu s každým záznamem. Jak vidíte na obrázku záznamu tak idZakazník je 1, to znamená že další záznam by byl idZakazník 2. Tuto funkci vám zajišťuje parament AUTO INCREMENT (AI).</p>
         <h5>Cizí klíče</h5>
         <p>Cizí klíč je primární klič z jiné tabulky. Jde o atribut, podle kterého poznáme jaké tabulky jsou spolu v relaci.</p>
       </div>  

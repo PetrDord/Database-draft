@@ -81,7 +81,6 @@ flex-direction: column;
 }
 .obash a {
   text-decoration: none;
-  color: rgb(47, 79, 79);
   font-weight: bold;
   font-size: 38px;
 }
@@ -89,7 +88,7 @@ flex-direction: column;
     text-decoration: underline;
 }
 .text {
-  width: 90%;
+  width: 92%;
   font-size:37px;
 }
 
@@ -129,10 +128,21 @@ margin-top: 2%;
 .text ul{
   color: rgb(63, 61, 61);
   margin-left: 2%;
-  ;
+ 
+}
+.SQL{
+ margin-top: 2%;
 }
 .text ul li{
   margin-bottom: 1%;
+}
+.text a{
+  text-decoration: none;
+  font-weight: bold;
+  color:rgb(75, 70, 70);
+}
+.text a:hover{
+  text-decoration: underline;
 }
 section{
   content: '';
@@ -202,13 +212,21 @@ footer .Fmenu  a:hover{
 }
 .oneN{
   content: url(../img/Mob1kuN.png);
-  width: 70%; 
+  width: 75%; 
   height: 80%; 
 }
 .MN{
   content: url(../img/MobMkuN.png);
   width: 70%; 
   height: 80%;
+}
+video{
+  object-fit: contain;
+}
+.dow{
+  width: 100px;
+  height: 100px;
+  
 }
 
 @media all and (min-width: 1000px){
@@ -296,7 +314,16 @@ footer .Fmenu  a:hover{
   }
   .MN{
     content: url(../img/MkuN.png);
-    width: 834px;
-   height: 160px;
+    width: 724px;
+   height: 138px;
+  }
+  video{
+    object-fit: contain;
+    margin-top: 2%;
+  }
+  .dow{
+    width: 48px;
+    height: 48px;
+    padding-top:2%;
   }
 }

@@ -27,6 +27,7 @@
           <li><a href="">Vyhledání informacích</a></li>
           <li><a href="">Rozdělení informacích do tabulek</a</li>
           <li><a href="">Vytvoření relací</a></li>
+          <li><a href="">Normalizace databáze</a></li>
         </ul>
         <div class="block">
           <h2 id="2">Základní zásady</h2>
@@ -55,18 +56,39 @@
          <p>Další krok je určit jednotlivé entity (tabulky) databáze. Nejlepší je začít u entit, které plynou z předchozích kroků. Jako náš přiklad opět využiji lehkou databázi knihovny, takovou to databázi můžeme rozdělit na entity Kniha, Autor a Čtenář.
            Tyto entity budou obsahovat atributy podle toho, co vše je potřeba evidovat. Můžeme si tyto atributy tabulek zapsat: </p>
            <br>
-          <p>Kniha(nazev, počet stran, autora, žánr, popis ...)</p>
+          <p>Kniha(nazev, počet stran, popis, datum pujčení, termín vrácení, stav(pujčeno, vráceno))</p>
           <br>
-          <p>Autor(jméno, příjmení, doba)</p>
+          <p>Autor(jméno)</p>
           <br>
-          <p>Čtenář(jméno, příjmení, telefon, email, ulice, číslo popisné, PSČ, město, datum narození) </p>
+          <p>Čtenář(jméno, telefon, email, adresa, datum narození) </p>
           <br>
-          <p>Důvod proč ulice, číslo popisné, PSČ a město neukládáme pod jeden atribut; adresa, je aby jsme dodržely první zásadu při návrhu databáze - hodnoty mají být nedělitelné. Ten stejný důvod platí i pro jméno, které dělime na jméno a přijmení.
-            Podobný důvod je i proč jsme z autora udělami vlatní entitu. Kdyby byl autor atribut tak by se mohly jména autorů opakovat a to porušije naší 4 zásadu; data kromě klíčů by měla být uložena pouze jednou.
-          </p>
-          
+          <p>Důvod proč jsme z autora udělami vlatní entitu je aby jsme dodržely 4. zásadu při návrhu databáze - Data kromě odkazů na primární klíč by měla být uložena pouze jednou.  </p>
+          <h3>Určení primárních klíčů</h3>
+          <p>Teď je načase si určit primární klíče našich entit. Jak jsme si již říkali na minulé stránce primární klíče často bývají identifikační čísla, které se o jednu zvyšují z každým záznamem.
+            Tento styl primárních klíčů bude platit i u naších entit, protože nemají lepší jednoznačný identifikátor.
+          <h3>Vytvoření tabulek</h3>
+          <p>Ještě než vám ukáži, jak se tabulky vytváří je důležíte dbát na naše základní zásady. U entity autor a čtenár budeme uvádět atribut jméno, ale aby jsme dodržely 1.zásadu. tak jej musíme rozdělit na atributy jméno a přijmení. To samá platí u atributu adresa, který musíme rozdělit na ulici, číslo popisné (ČP), PSČ, město. 
+            Pokud jsme si tohoto vědomi můžeme začít vytvářet tabulky. Dole uvidíte video, kde vám ukáži, jak se tabulky vytvářejí a jak se vnich výtvářejí atributy, ve videu budu použivat software <a href="https://www.mysql.com/products/workbench/">MySQL workbench</a>.</p>
+          <video width="100%" controls> 
+          <source src="../videos/" type="video/mp4">
+          Váš prohlížeš nemuže přehrát toto video
+          </video>
        </div>
-      
+       <div class="block">
+        <h2>Vytvoření relací</h2>
+        <p>Když už máme naše tabulky, tak nás čeká další důležítý krok, vytvoření relací (vztahů) mezi tabulkami. Nejdříve musíme zjistit, jaký mají data z jedné tabulky vztah k datům z druhé tabulky a podle toho určit vazbu mezi nimi.
+         Např. u našich tabulek kniha a čtenář  můžeme vyjádřit vztah mezi jejich daty takto:"Jeden čtenář si může půjčit více knih, ale jedna kniha může být půjčena pouze jedním čtenářem". To znamená že relace mezi těmito entitami je 1:N.
+         Další relace je mezi tabulkami kniha a autor, vztah mezi těmito tabulkami lze vyjádřit takto:"Kniha může mít více autorů a autor může mít více knih". To znamená že relace mezi těmoto entitami je M:N. Mezi tabulkami autor a čtenář není žádná logická vazba.
+         Pod tímto textem najdete další video ukázku, kde uvidíte jak se tyto relace vytvářejí.
+        </p>
+        <video width="100%" controls> 
+          <source src="../videos/" type="video/mp4">
+          Váš prohlížeš nemuže přehrát toto video
+          </video>
+       </div>
+      <div class="block">
+        <p>Tady si můžete stáhnout náš návrh databáze:</p><a href="../dowloands/knihovna.mwb" download><img class="dow" src="../img/MySQL.png" alt="stahovaní logo"></a>
+        <p>Tady si můžete stáhnout SQL creation scrip s kterým budem pracovat v poslední části teto stránky:</p><a href="../dowloands/knihovnaSQL.zip" download><img class="dow" src="../img/SQL.png" alt="stahovaní logo"></a>
     </div>
 </main>  
 <footer>
