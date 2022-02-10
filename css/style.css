@@ -317,13 +317,14 @@ video{
     width: 724px;
    height: 138px;
   }
-  video{
-    object-fit: contain;
-    margin-top: 2%;
-  }
+ 
   .dow{
     width: 48px;
     height: 48px;
     padding-top:2%;
   }
+  video{
+    margin-top: 2px;
+  }
+
 }
