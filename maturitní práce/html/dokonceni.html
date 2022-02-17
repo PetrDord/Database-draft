@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Návrch Relační Databáze</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <button class="toggel" aria-controls="navig" aria-expanded="false"><span class="sr-only">&#9776</span></button>
+      <nav>
+        <ul id="navig" data-visible="false" class="links">
+          <li><a class="link" href="../index.html" >Home</a></li>
+          <li><a class="link" href="zaklady.html">Základy</a></li>
+          <li><a class="link" href="proces.html">Proces Návrhu</a></li>
+          <li><a class="link" href="dokonceni.html">Dokončení </a>
+         <li><a class="link" href="zdroje.html">Zdroje</a>
+        </ul>
+      </nav>
+    </header>
+<main>
+      <div class="text">
+      <h1>Co se v článku dozvíte ?</h1>
+        <ul class="obash">
+          <li><a href="#1">Odladění návrhu</a></li>
+          <li><a href="#2">Jazyk SQL</a</li>
+          <li><a href="#3">Naplnění databáze</a></li>
+        </ul>
+      <div id="1"class="block">
+        <h2>Odladění návrhu</h2>
+        <p>Když už máme naše tabulky a relace hotové, je načase naší databázi vyzkoušet na testovacích datech.
+          Databázi naplníme testovacími daty a s těmito daty budeme pracovat (vytvářet dotazy, přidávat záznamy, měnit existující zaznamy, mazat záznamy...). Tímto způsobem můžeme objevit poteciální problémy,
+           např. že nám chýbějí nějaké atributy, nebo že máme přebytečné atributy (dají se zjistit z jiné tabulky) nebo že databáze obsahuje tabulku, ktetá se musí rozdělit na dvě. Níže vám ukáži, jak databázi daty naplnit a jak s nimi pracovat
+          , ale nejdříve si musíme něco říci o jazyku SQL.
+        </p>
+      </div>
+      <div id="2" class="block">
+        <h2>SQL</h2>
+        <p>SQL je zkratka (Structured Query Language) česky strukturovaný dotazovací jazyk. Pomocí tohoto jazyku můžeme získávat, vkládat, měnit nebo mazat data z databáze. Také nám dovoluje vytvářet objekty (tabulky) a nastavovat přistupová práva.</p>
+        <h3>Několik zaklaních SQL příkazů</h3>
+         <h4>Příkazy pro manipulaci z daty (DML - Data Manipulation Language)</h4>
+         <p>Tyto příkazy slouží abychom mohly s databází pracovat.</p>
+        <ul class="SQL">
+          <li>SELECT - vybírá data z databáze, umožňuju výběr pod množin a řazení dat</li>
+          <li>INSERT - vkláda data do databáze</li>
+          <li>UPDATE - mění data v databázi</li>
+          <li>DELETE - odstraňuje záznamy z databáze</li>
+        </ul>
+        
+        <h4>Příkazy pro definici dat (DDL - Data Definition Language)</h4>
+        <p>Těmito příkazy se vytvářejí struktury databáze jako jsou tabulky a další objekty.</p>
+        <ul class="SQL">
+          <li>CREATE - vytoří nový objekt</li>
+          <li>ALTER - mění již existující objekty</li>
+          <li>DROP - odstraní objekt</li>
+        </ul>
+        <h4>Příkazy pro řízení dat (DCL - Data Control Language)</h4>
+        <p>Tyto příkazy slouží k nastavení přístupových práv a řízení transakcí.</p>
+        <ul class="SQL">
+          <li>GRANT - přidělí oprávění uživateli k určitým objektům</li>
+          <li>REVOKE - odnětí práv uživateli</li>
+          <li>BEGIN - zahájení transakce</li>
+          <li>COMMIT - potvrzení transakce</li>
+          <li>ROLLBACK - zrušení transakce, návrat do původního stavu</li>
+        </ul>
+       <p>Na této stránce najdete více užitečných SQL příkazů:<a href="https://biportal.cz/zaklady-sql-nejpouzivanejsi-prikazy/">bipportal.cz</a></p>
+       <p>A pokud vám nevadí angličtina tak i na této stránce:<a href="https://www.w3schools.com/sql/">w3schools.com</a></p></p>
+      </div>
+      <div id="3" class="block">
+        <h2>Naplnění databáze</h2>
+        <p>Teď nás čeká poslední krok a to jo naplnit databázi. Při naplňování databáze budeme požívat DML příkazy. Pro naplňování databáze vám doporučuji stáhnout Apache server <a href="https://www.apachefriends.org/download.html" >Xampp</a> nebo <a href="https://www.wampserver.com/en/" >Wamp</a> nebo nějaký co podporuje MySQL server.
+         Dole uvidíte video, kde vám ukáži jak databázi naplnit a jak s ní pracovat.</p>
+         <video controls width="100%">
+          <source src="../videos/3.m4v" type="video/mp4">
+          Toto nejde přehrát.
+         </video>
+         
+    </div>
+</main>  
+<footer>
+
+  
+  </div>
+</footer>
+<script src="../js/menu.js"></script>
+</body>
+</html>
