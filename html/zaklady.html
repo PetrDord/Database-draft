@@ -13,8 +13,9 @@
           <li><a class="link" href="../index.html" >Home</a></li>
           <li><a class="link" href="zaklady.html">Základy</a></li>
           <li><a class="link" href="proces.html">Proces Návrhu</a></li>
-          <li><a class="link" href="dokonceni.html">Dokončení </a>
-          </li>
+          <li><a class="link" href="dokonceni.html">Dokončení </a></li>
+          <li><a class="link" href="zdroje.html">Zdroje</a></li>
+        
         </ul>
       </nav>
     </header>
@@ -22,23 +23,24 @@
       <div class="text">
       <h1>Co se v článku dozvíte ?</h1>
         <ul class="obash">
-          <li><a href="">Co to je databáze</a></li>
-          <li><a href="">Relační databáze</a></li>
-          <li><a href="">Vazby mezi tabulkami</a></li>
+          <li><a href="#1">Co to je databáze</a></li>
+          <li><a href="#2">Relační databáze</a></li>
+          <li><a href="#3">Vazby mezi tabulkami</a></li>
+          
         </ul>
-      <div class="block"> 
-       <h2 id="1">Co je to databáze</h2>
+      <div id="1" class="block"> 
+       <h2>Co je to databáze</h2>
          <p>Databáze je uspořádána množina dat, tyto data jsou vzájemně propojené a jsou uložené na nějakém vnějším médiu. Součástí databáze
            jsou i softwarové prostředky, které nám umožňují manipulaci s uloženými daty. Tento software se názývá systém řízení báze dat ve zkratce SŘBD.
            Když spojíme SŘBD a databázi, vznikne nám tak znavý databázový systém. Databázový sýstem nám umožňuje shromažďovat, manipulavat, měnit, prohlížet a udržovat uložená data.
          </p>
          <br>
          <p>Existuje spousta databozých modelu. Tyto modely se dělí podle toho jak ukládají data a vazby.
-           Např. máme databáze Hierarchické, Síťové, Objektové, ale nás bude zajímat pouze Relační databáze, protože se dnes nejpoužívanější.
+           Např. máme databáze Hierarchické, Síťové, Objektové, ale nás bude zajímat pouze Relační databáze, protože jsou dnes nejpoužívanější.
          </p>
       </div>
-      <div class="block">
-       <h2 id="2">Relační databáze</h2>
+      <div id="2" class="block">
+       <h2>Relační databáze</h2>
        <p>Relační databáze jak již bylo řečeno jsou nejpoužívanější datatáze, a to  kvůli tomu, že jsou snadno pochopitelné a jednoduché k sestrojení.
         Je tu řada relačních SŘBD např. MySQL, Microsoft Access, MariaDB, Oracle, Firebird a další.
         Pro webové aplikace je nejpoužívanější MySQL v kombinaci s programovacím jazykem PHP.
@@ -69,7 +71,7 @@
         <h5>Cizí klíče</h5>
         <p>Cizí klíč je primární klič z jiné tabulky. Jde o atribut, podle kterého poznáme jaké tabulky jsou spolu v relaci.</p>
       </div>  
-      <div class="block">
+      <div id="3"class="block">
         <h2>Vztahy mezi tabulkami</h2>
         <h3>Vztah 1:1</h3>
         <p>Tento vztah znamená, že jedné položce z první tabulky odpovída právě jedna položka z druhé tabulky.
@@ -91,15 +93,7 @@
     </div>
 </main>  
 <footer>
-    <ul class="Fmenu">
-      <li><a class="" href="../index.html">Home</a></li>
-      <li><a class="" href="zaklady.html">Základy</a></li>
-      <li><a class="" href="proces.html">Proces Návrhu</a></li>
-      <li><a class="" href="dokonceni.html" >Dokončení</a>
-      </li>
-    </ul>
   
-  </div>
 </footer>
 <script src="../js/menu.js"></script>
 </body>

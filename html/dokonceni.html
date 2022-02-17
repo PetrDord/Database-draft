@@ -14,7 +14,7 @@
           <li><a class="link" href="zaklady.html">Základy</a></li>
           <li><a class="link" href="proces.html">Proces Návrhu</a></li>
           <li><a class="link" href="dokonceni.html">Dokončení </a>
-          </li>
+         <li><a class="link" href="zdroje.html">Zdroje</a>
         </ul>
       </nav>
     </header>
@@ -22,11 +22,11 @@
       <div class="text">
       <h1>Co se v článku dozvíte ?</h1>
         <ul class="obash">
-          <li><a href="">Odladění návrhu</a></li>
-          <li><a href="">Jazyk SQL</a</li>
-          <li><a href="">Naplnění databáze</a></li>
+          <li><a href="#1">Odladění návrhu</a></li>
+          <li><a href="#2">Jazyk SQL</a</li>
+          <li><a href="#3">Naplnění databáze</a></li>
         </ul>
-      <div class="block">
+      <div id="1"class="block">
         <h2>Odladění návrhu</h2>
         <p>Když už máme naše tabulky a relace hotové, je načase naší databázi vyzkoušet na testovacích datech.
           Databázi naplníme testovacími daty a s těmito daty budeme pracovat (vytvářet dotazy, přidávat záznamy, měnit existující zaznamy, mazat záznamy...). Tímto způsobem můžeme objevit poteciální problémy,
@@ -34,12 +34,12 @@
           , ale nejdříve si musíme něco říci o jazyku SQL.
         </p>
       </div>
-      <div class="block">
+      <div id="2" class="block">
         <h2>SQL</h2>
         <p>SQL je zkratka (Structured Query Language) česky strukturovaný dotazovací jazyk. Pomocí tohoto jazyku můžeme získávat, vkládat, měnit nebo mazat data z databáze. Také nám dovoluje vytvářet objekty (tabulky) a nastavovat přistupová práva.</p>
         <h3>Několik zaklaních SQL příkazů</h3>
          <h4>Příkazy pro manipulaci z daty (DML - Data Manipulation Language)</h4>
-         <p>Tyto příkazy slouží k získaní dat z databáze a pro jejich úpravu.</p>
+         <p>Tyto příkazy slouží abychom mohly s databází pracovat.</p>
         <ul class="SQL">
           <li>SELECT - vybírá data z databáze, umožňuju výběr pod množin a řazení dat</li>
           <li>INSERT - vkláda data do databáze</li>
@@ -48,7 +48,7 @@
         </ul>
         
         <h4>Příkazy pro definici dat (DDL - Data Definition Language)</h4>
-        <p>Těmito příkazy se vytvářejí struktury databáze - tabulky, indexy, pohledy a další objekty.</p>
+        <p>Těmito příkazy se vytvářejí struktury databáze jako jsou tabulky a další objekty.</p>
         <ul class="SQL">
           <li>CREATE - vytoří nový objekt</li>
           <li>ALTER - mění již existující objekty</li>
@@ -66,7 +66,7 @@
        <p>Na této stránce najdete více užitečných SQL příkazů:<a href="https://biportal.cz/zaklady-sql-nejpouzivanejsi-prikazy/">bipportal.cz</a></p>
        <p>A pokud vám nevadí angličtina tak i na této stránce:<a href="https://www.w3schools.com/sql/">w3schools.com</a></p></p>
       </div>
-      <div class="block">
+      <div id="3" class="block">
         <h2>Naplnění databáze</h2>
         <p>Teď nás čeká poslední krok a to jo naplnit databázi. Při naplňování databáze budeme požívat DML příkazy. Pro naplňování databáze vám doporučuji stáhnout Apache server <a href="https://www.apachefriends.org/download.html" >Xampp</a> nebo <a href="https://www.wampserver.com/en/" >Wamp</a> nebo nějaký co podporuje MySQL server.
          Dole uvidíte video, kde vám ukáži jak databázi naplnit a jak s ní pracovat.</p>
@@ -74,16 +74,11 @@
           <source src="../videos/3.m4v" type="video/mp4">
           Toto nejde přehrát.
          </video>
+         
     </div>
 </main>  
 <footer>
-    <ul class="Fmenu">
-      <li><a class="" href="../index.html">Home</a></li>
-      <li><a class="" href="zaklady.html">Základy</a></li>
-      <li><a class="" href="proces.html">Proces Návrhu</a></li>
-      <li><a class="" href="dokonceni.html" >Dokončení</a>
-      </li>
-    </ul>
+
   
   </div>
 </footer>
