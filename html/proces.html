@@ -12,7 +12,7 @@
         <ul id="navig" data-visible="false" class="links">
           <li><a class="link" href="../index.html" >Home</a></li>
           <li><a class="link" href="zaklady.html">Základy</a></li>
-          <li><a class="link" href="proces.html">Proces Návrhu</a></li>
+          <li><a class="link" href="proces.html">Proces návrhu</a></li>
           <li><a class="link" href="dokonceni.html">Dokončení </a></li>
           <li><a class="link" href="zdroje.html">Zdroje</a></li>
         </ul>
@@ -20,7 +20,8 @@
     </header>
 <main>
       <div class="text">
-      <h1>Co se v článku dozvíte ?</h1>
+      <h1>Proces návrhu</h1>
+      <h2>Co se v článku dozvíte?</h2>
         <ul class="obash">
           <li><a href="#1">Zakladní zásady</a></li>
           <li><a href="#2">Účel databáze</a></li>
@@ -70,10 +71,12 @@
           <p>Ještě než vám ukáži, jak se tabulky vytváří je důležíte dbát na naše základní zásady. U entity autor a čtenár budeme uvádět atribut jméno, ale aby jsme dodržely 1.zásadu. tak jej musíme rozdělit na atributy jméno a přijmení. To samá platí u atributu adresa, který musíme rozdělit na ulici, číslo popisné (ČP), PSČ, město. 
             Pokud jsme si tohoto vědomi můžeme začít vytvářet tabulky. Dole uvidíte video, kde vám ukáži, jak se tabulky vytvářejí a jak se vnich výtvářejí atributy, ve videu budu použivat software <a href="https://www.mysql.com/products/workbench/">MySQL workbench</a>.</p>
        </div>
+       <div class="block">
        <video controls width="100%">
         <source src="../videos/1.m4v" type="video/mp4">
         Toto nejde přehrát.
        </video>
+      </div>
        <div id="5" class="block">
         <h2>Vytvoření relací</h2>
         <p>Když už máme naše tabulky, tak nás čeká další důležítý krok, vytvoření relací (vztahů) mezi tabulkami. Nejdříve musíme zjistit, jaký mají data z jedné tabulky vztah k datům z druhé tabulky a podle toho určit vazbu mezi nimi.
@@ -81,7 +84,9 @@
          Další relace je mezi tabulkami kniha a autor, vztah mezi těmito tabulkami lze vyjádřit takto:"Kniha může mít více autorů a autor může mít více knih". To znamená že relace mezi těmoto entitami je M:N. Mezi tabulkami autor a čtenář není žádná logická vazba.
          Pod tímto textem najdete další video ukázku, kde uvidíte jak se tyto relace vytvářejí.
         </p>
-        <video controls width="100%">
+      </div>
+      <div class="block">
+        <video controls width="100%"> 
           <source src="../videos/2.m4v" type="video/mp4">
           Toto nejde přehrát.
          </video>
@@ -96,7 +101,7 @@
          <h3>2.NF</h3>
          <p>Neklíčové atributy musí být zavislé na primátním klíči. Např. dávat atrubit jmeno čtenáře do tabulky kniha, protože tento atribut nesouvisí s primárním klíčem idkniha. Místo toho vytvoříme tabulku čtenář, kde jej budem evidovat a bude sousviset s jejím primárním klíčem.</p>
          <h3>3.NF</h3>
-         <p>Žádný neklíčový atribut není tranzitivně zavislí na klíči. Tranzativní závislost je závislost mezi dvěma nebo více atrubuty a klíčem, kde jeden atribut je zavislí na klíči a druhý je zavislí na prvním atributu. Tuto formu není vždy nutné dodržovat.
+         <p>Žádný neklíčový atribut není tranzitivně zavislí na klíči. Tranzativní závislost je závislost mezi dvěma nebo více atrubuty a klíčem, kde jeden atribut je zavislí na klíči a druhý je zavislí na prvním atributu. Tento problém se vyřeší, tak že se udělá nová tabulka, která bude obsahovat atributy, které jsou na sebe závíslé a vytvoří se relace relace s tabulkou, kde byly půbodně.  Tuto formu není vždy nutné dodržovat.
            </p>
        </div>
       <div class="block">
@@ -106,9 +111,19 @@
     </div>
 </main>  
 <footer>
-
-  
+  <div class="Fcontent">
+  <div class="udaje">
+    <ul>
+      <li>Nazev práce: Webový průvodce návrhem databáze s typovími příklady </li>
+      <li>Autor: Petr Ďorď</li>
+      <li>Konzultant: Mgr.Petr Kozák</li>
+    </ul>
   </div>
+  <div class="skola">
+    <p><a href="http://www.skolavdf.cz/">Vyšší odborná škola, Střední průmyslová škola a Střední odborná škola služeb a cestovního ruchu, Varnsdorf, Bratislavská 2166, příspěvková organizace</a></p>
+  </div>
+</div>
+
 </footer>
 <script src="../js/menu.js"></script>
 </body>

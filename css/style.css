@@ -50,10 +50,9 @@ flex-direction: column;
   aspect-ratio: 1;
   top:1%;
   right: 1%;
-
   z-index: 9999;
   border-radius: 25%;
-  
+
 }
 .link {
   color: white;
@@ -76,7 +75,7 @@ flex-direction: column;
  }
  .obash {
   margin-left: 2%;
-  line-height: 3.5;
+  line-height: 2.5;
   
 }
 .obash a {
@@ -188,9 +187,10 @@ footer{
   background: rgb(105,105,105);
   color: white;
   margin-top: auto ;
-  height: 8vh;
+  height: 30%;
   width: 100%;  
   align-items: center;
+  color: white;
 }
 
 .one{
@@ -217,6 +217,30 @@ video{
   
 }
 
+
+.udaje ul{
+  list-style: none;
+  margin-top:2% ;
+}
+.Fcontent{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  font-size: 28px;
+  text-align: center;
+}
+.skola{
+  width: 80%;
+  margin-left:11%;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+.skola a{
+ text-decoration: none;
+ color: white;
+}
+
+
+
 @media all and (min-width: 1000px){
   .links{
   display: flex;
@@ -235,6 +259,7 @@ video{
   }
   header{
     height: 8vh;
+    
   }
   main{
     padding-top: 10vh;
@@ -278,9 +303,7 @@ video{
     font-size: 33px;
     color: rgb(37, 36, 36);;
   }
-  footer{
-    height: 8vh;
-  }
+
 
   .one{
     content: url(../img/1ku1.png);
@@ -304,8 +327,21 @@ video{
     height: 48px;
     padding-top:2%;
   }
-  video{
-    margin-top: 2px;
-  }
-
+ 
+ .Fcontent{
+   display: flex;
+   justify-content: space-evenly; 
+   font-size: 16px;
+   text-align: left;
+ }
+ .skola{
+   width: 25%;
+  margin-left:0%;
+  margin-top: 0.45%;
+  margin-bottom: 0%;
+ }
+ .udaje{
+   margin-bottom:1%;
+ }
 }
+
