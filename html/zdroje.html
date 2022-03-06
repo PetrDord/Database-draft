@@ -7,10 +7,16 @@
   </head>
   <body>
     <header>
-      <button class="toggel" aria-controls="navig" aria-expanded="false"><span class="sr-only">&#9776</span></button>
+        <!--Tlačítko pro hamburger menu v mobilní verzi webu
+      @aria-controls - Co konruluje pomocí id
+      @expanded - Jestli je menu vysunuto
+      -->
+      <button class="ham" aria-controls="menu" expanded="false">&#9776</button>
+       <!--Navigace stránky
+         @stav - Jestli je menu vysunuto -->
       <nav>
-        <ul id="navig" data-visible="false" class="links">
-          <li><a class="link" href="../index.html" >Home</a></li>
+        <ul id="menu" stav="false" class="links">
+          <li><a class="link" href="../index.html" >Úvod</a></li>
           <li><a class="link" href="zaklady.html">Základy</a></li>
           <li><a class="link" href="proces.html">Proces Návrhu</a></li>
           <li><a class="link" href="dokonceni.html">Dokončení </a></li>
@@ -20,11 +26,13 @@
     </header>
 <main>
       <div class="text">
-   
+       <div class="block">
       <h1>Materiáli použity pro obsah stránky</h1>
-      <ul class="obash">
-        
-          
+      <ul>
+       <li>Základy relačních databází, jejich využití v programování webu [online]. Katedra multimédií – Vysoká škola ekonomická v Praze. [cit. 28.02.2022]. Dostupné z: <a href="https://kme.vse.cz/wp-content/uploads/page/534/4.-Z%C3%A1klady-rela%C4%8Dn%C3%ADch-datab%C3%A1z%C3%AD-jejich-vyu%C5%BEit%C3%AD-v-programov%C3%A1n%C3%AD-webu.pdf">kme.vse.cz</a></li>
+       <li>Základy návrhu databáze [online]. Microsoft Support. [cit. 01.03.2022] Dostupné z: <a href="https://support.microsoft.com/cs-cz/office/z%C3%A1klady-n%C3%A1vrhu-datab%C3%A1ze-eb2159cf-1e30-401a-8084-bd4f9c9ca1f5">support.microsoft.com</a></li>
+       <li>Databázové systémy. Inovace VOV [online]. [cit. 03.03.2022]. Dostupné z: <a href="https://www.vovcr.cz/odz/tech/393/page00.html">www.vovcr.cz</a></li>
+       <li>NOSKOVÁ, Jana. Způsoby návrhu databáze nástrojem MySQL Workbench (bakalářská práce). Západočeská univerzita v Plzni, 2014. Dostupné z: <a href="https://dspace5.zcu.cz/bitstream/11025/17839/1/BP.pdf">dspace5.zcu.cz</a></li>
       </ul>
       </div>
     </div>
@@ -33,9 +41,9 @@
   <div class="Fcontent">
   <div class="udaje">
     <ul>
-      <li>Nazev práce: Webový průvodce návrhem databáze s typovími příklady </li>
+      <li>Název práce: Webový průvodce návrhem databáze s typovími příklady </li>
       <li>Autor: Petr Ďorď</li>
-      <li>Konzultant: Mgr.Petr Kozák</li>
+      <li>Konzultant: Mgr. Petr Kozák</li>
     </ul>
   </div>
   <div class="skola">
