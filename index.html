@@ -7,10 +7,16 @@
   </head>
   <body>
     <header>
-      <button class="toggel" aria-controls="navig" aria-expanded="false"><span class="sr-only">&#9776</span></button>
+      <!--Tlačítko pro hamburger menu v mobilní verzi webu
+      @aria-controls - Co konruluje pomocí id
+      @expanded - Jestli je menu vysunuto
+      -->
+      <button class="ham" aria-controls="menu" expanded="false">&#9776</button>
+      <!--Navigace stránky
+         @stav - Jestli je menu vysunuto -->
       <nav>
-        <ul id="navig" data-visible="false" class="links">
-          <li><a class="link" href="index.html" >Home</a></li>
+        <ul id="menu" stav="false" class="links">
+          <li><a class="link" href="index.html" >Úvod</a></li>
           <li><a class="link" href="html/zaklady.html">Základy</a></li>
           <li><a class="link" href="html/proces.html">Proces návrhu</a></li>
           <li><a class="link" href="html/dokonceni.html">Dokončení </a></li>
@@ -31,9 +37,9 @@
       <div class="Fcontent">
       <div class="udaje">
         <ul>
-          <li>Nazev práce: Webový průvodce návrhem databáze s typovími příklady </li>
+          <li>Název práce: Webový průvodce návrhem databáze s typovími příklady </li>
           <li>Autor: Petr Ďorď</li>
-          <li>Konzultant: Mgr.Petr Kozák</li>
+          <li>Konzultant: Mgr. Petr Kozák</li>
         </ul>
       </div>
      

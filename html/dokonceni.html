@@ -7,10 +7,16 @@
   </head>
   <body>
     <header>
-      <button class="toggel" aria-controls="navig" aria-expanded="false"><span class="sr-only">&#9776</span></button>
+      <!--Tlačítko pro hamburger menu v mobilní verzi webu
+      @aria-controls - Co konruluje pomocí id
+      @expanded - Jestli je menu vysunuto
+      -->
+      <button class="ham" aria-controls="menu" expanded="false">&#9776</button>
+      <!--Navigace stránky
+         @stav - Jestli je menu vysunuto -->
       <nav>
-        <ul id="navig" data-visible="false" class="links">
-          <li><a class="link" href="../index.html" >Home</a></li>
+        <ul id="navig" stav="false" class="links">
+          <li><a class="link" href="../index.html" >Úvod</a></li>
           <li><a class="link" href="zaklady.html">Základy</a></li>
           <li><a class="link" href="proces.html">Proces návrhu</a></li>
           <li><a class="link" href="dokonceni.html">Dokončení </a>
@@ -22,6 +28,7 @@
       <div class="text">
       <h1>Dokončení návrhu</h1>
       <h2>Co se v článku dozvíte?</h2>
+      
         <ul class="obash">
           <li><a href="#1">Odladění návrhu</a></li>
           <li><a href="#2">Jazyk SQL</a</li>
@@ -29,50 +36,51 @@
         </ul>
       <div id="1"class="block">
         <h2>Odladění návrhu</h2>
-        <p>Když už máme naše tabulky a relace hotové, je načase naší databázi vyzkoušet na testovacích datech.
-          Databázi naplníme testovacími daty a s těmito daty budeme pracovat (vytvářet dotazy, přidávat záznamy, měnit existující zaznamy, mazat záznamy...). Tímto způsobem můžeme objevit poteciální problémy,
+        <p>Když už máme naše tabulky a relace hotové, je načase naši databázi vyzkoušet na testovacích datech.
+          Databázi naplníme testovacími daty a s těmito daty budeme pracovat (vytvářet dotazy, přidávat záznamy, měnit existující záznamy, mazat záznamy...). Tímto způsobem můžeme objevit poteciální problémy,
            např. že nám chýbějí nějaké atributy, nebo že máme přebytečné atributy (dají se zjistit z jiné tabulky) nebo že databáze obsahuje tabulku, ktetá se musí rozdělit na dvě. Níže vám ukáži, jak databázi daty naplnit a jak s nimi pracovat
           , ale nejdříve si musíme něco říci o jazyku SQL.
         </p>
       </div>
       <div id="2" class="block">
         <h2>SQL</h2>
-        <p>SQL je zkratka (Structured Query Language) česky strukturovaný dotazovací jazyk. Pomocí tohoto jazyku můžeme získávat, vkládat, měnit nebo mazat data z databáze. Také nám dovoluje vytvářet objekty (tabulky) a nastavovat přistupová práva.</p>
+        <p>SQL je zkratka (Structured Query Language) česky strukturovaný dotazovací jazyk. Pomocí tohoto jazyku můžeme získávat, vkládat, měnit nebo mazat data z databáze. Také nám dovoluje vytvářet objekty (tabulky) a nastavovat přístupová práva.</p>
         <h3>Několik zaklaních SQL příkazů</h3>
          <h4>Příkazy pro manipulaci z daty (DML - Data Manipulation Language)</h4>
          <p>Tyto příkazy slouží abychom mohly s databází pracovat.</p>
         <ul class="SQL">
-          <li>SELECT - vybírá data z databáze, umožňuju výběr pod množin a řazení dat</li>
+          <li>SELECT - umožňuje výběr dat z databáze</li>
           <li>INSERT - vkláda data do databáze</li>
-          <li>UPDATE - mění data v databázi</li>
-          <li>DELETE - odstraňuje záznamy z databáze</li>
+          <li>UPDATE - mění existující data v databázi</li>
+          <li>DELETE - odstraňuje data z databáze</li>
         </ul>
         
         <h4>Příkazy pro definici dat (DDL - Data Definition Language)</h4>
-        <p>Těmito příkazy se vytvářejí struktury databáze jako jsou tabulky a další objekty.</p>
+        <p>Těmito příkazy se vytvářejí objekty (tabulky) v databázi.</p>
         <ul class="SQL">
-          <li>CREATE - vytoří nový objekt</li>
+          <li>CREATE - vytváří nové objekty v databázi</li>
           <li>ALTER - mění již existující objekty</li>
-          <li>DROP - odstraní objekt</li>
+          <li>DROP - odstraní objekty v databázi</li>
         </ul>
-        <h4>Příkazy pro řízení dat (DCL - Data Control Language)</h4>
+        <h4>Příkazy pro řízení dat (DCL - Data Control Language) a příkazy pro ovládání transakcí (TCL - Transaction Control Language)</h4>
         <p>Tyto příkazy slouží k nastavení přístupových práv a řízení transakcí.</p>
         <ul class="SQL">
           <li>GRANT - přidělí oprávění uživateli k určitým objektům</li>
-          <li>REVOKE - odnětí práv uživateli</li>
-          <li>BEGIN - zahájení transakce</li>
-          <li>COMMIT - potvrzení transakce</li>
-          <li>ROLLBACK - zrušení transakce, návrat do původního stavu</li>
+          <li>REVOKE - odebírá práva uživateli</li>
+          <li>BEGIN - spustí transakci</li>
+          <li>COMMIT - odsouhlasení transakce</li>
+          <li>ROLLBACK - zruší transakci a vrátí se do stavu před ní.</li>
         </ul>
-       <p>Na této stránce najdete více užitečných SQL příkazů:<a href="https://biportal.cz/zaklady-sql-nejpouzivanejsi-prikazy/">bipportal.cz</a></p>
-       <p>A pokud vám nevadí angličtina tak i na této stránce:<a href="https://www.w3schools.com/sql/">w3schools.com</a></p></p>
+       <p>Na této stránce najdete více užitečných SQL příkazů: <a href="https://biportal.cz/zaklady-sql-nejpouzivanejsi-prikazy/">bipportal.cz</a></p>
+       <p>A pokud vám nevadí angličtina, tak i na této stránce: <a href="https://www.w3schools.com/sql/">w3schools.com</a></p></p>
       </div>
       <div id="3" class="block">
         <h2>Naplnění databáze</h2>
-        <p>Teď nás čeká poslední krok a to jo naplnit databázi. Při naplňování databáze budeme požívat DML příkazy. Pro naplňování databáze vám doporučuji stáhnout Apache server <a href="https://www.apachefriends.org/download.html" >Xampp</a> nebo <a href="https://www.wampserver.com/en/" >Wamp</a> nebo nějaký co podporuje MySQL server.
-         Dole uvidíte video, kde vám ukáži jak databázi naplnit a jak s ní pracovat.</p>
+        <p>Teď nás čeká poslední krok a to jak naplnit databázi. Při naplňování databáze budeme používat DML příkazy. Pro naplňování databáze vám doporučuji stáhnout program <a href="https://www.apachefriends.org/download.html" >Xampp</a> nebo <a href="https://www.wampserver.com/en/" >Wamp</a>, kde budeme používat funkci phpmyadmin při naplňování databáze.
+         Dole uvidíte video, kde vám ukáži, jak databázi naplnit a jak s ní pracovat.</p>
         </div>
         <div class="block">
+          <!--Vkládání videa na stránku ze složky videos-->
          <video controls width="100%">
           <source src="../videos/3.m4v" type="video/mp4">
           Toto nejde přehrát.
@@ -85,9 +93,9 @@
   <div class="Fcontent">
   <div class="udaje">
     <ul>
-      <li>Nazev práce: Webový průvodce návrhem databáze s typovími příklady </li>
+      <li>Název práce: Webový průvodce návrhem databáze s typovými příklady </li>
       <li>Autor: Petr Ďorď</li>
-      <li>Konzultant: Mgr.Petr Kozák</li>
+      <li>Konzultant: Mgr. Petr Kozák</li>
     </ul>
   </div>
   <div class="skola">

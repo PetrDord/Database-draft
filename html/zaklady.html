@@ -7,10 +7,16 @@
   </head>
   <body>
     <header>
-      <button class="toggel" aria-controls="navig" aria-expanded="false"><span class="sr-only">&#9776</span></button>
+        <!--Tlačítko pro hamburger menu v mobilní verzi webu
+      @aria-controls - Co konruluje pomocí id
+      @expanded - Jestli je menu vysunuto
+      -->
+      <button class="ham" aria-controls="menu" expanded="false">&#9776</button>
+   <!--Navigace stránky
+         @stav - Jestli je menu vysunuto -->
       <nav>
-        <ul id="navig" data-visible="false" class="links">
-          <li><a class="link" href="../index.html" >Home</a></li>
+        <ul id="menu" stav="false" class="links">
+          <li><a class="link" href="../index.html" >Úvod</a></li>
           <li><a class="link" href="zaklady.html">Základy</a></li>
           <li><a class="link" href="proces.html">Proces návrhu</a></li>
           <li><a class="link" href="dokonceni.html">Dokončení </a></li>
@@ -21,54 +27,54 @@
     </header>
 <main>
       <div class="text">
-      <h1>Základy databázích</h1>
+      <h1>Základy databází</h1>
       <h2>Co se v článku dozvíte?</h2>
         <ul class="obash">
-          <li><a href="#1">Co to je databáze</a></li>
+          <li><a href="#1">Co je to databáze</a></li>
           <li><a href="#2">Relační databáze</a></li>
           <li><a href="#3">Vazby mezi tabulkami</a></li>
           
         </ul>
       <div id="1" class="block"> 
        <h2>Co je to databáze</h2>
-         <p>Databáze je uspořádána množina dat, tyto data jsou vzájemně propojené a jsou uložené na nějakém vnějším médiu. Součástí databáze
-           jsou i softwarové prostředky, které nám umožňují manipulaci s uloženými daty. Tento software se názývá systém řízení báze dat ve zkratce SŘBD.
-           Když spojíme SŘBD a databázi, vznikne nám tak znavý databázový systém. Databázový sýstem nám umožňuje shromažďovat, manipulavat, měnit, prohlížet a udržovat uložená data.
+         <p>Databáze je uspořádaná množina dat, tyto data jsou vzájemně propojené a jsou uložené na nějakém vnějším médiu. Součástí databáze
+           jsou i softwarové prostředky, které nám umožňují manipulaci s uloženými daty. Tento software se nazývá systém řízení báze dat ve zkratce SŘBD.
+           Když spojíme SŘBD a databázi, vznikne nám takznavý databázový systém. Databázový sýstem nám umožňuje shromažďovat, manipulavat, měnit, prohlížet a udržovat uložená data.
          </p>
          <br>
-         <p>Existuje spousta databozých modelu. Tyto modely se dělí podle toho jak ukládají data a vazby.
+         <p>Existuje spousta databozých modelů. Tyto modely se dělí podle toho jak ukládají data a vazby.
            Např. máme databáze Hierarchické, Síťové, Objektové, ale nás bude zajímat pouze Relační databáze, protože jsou dnes nejpoužívanější.
          </p>
       </div>
       <div id="2" class="block">
        <h2>Relační databáze</h2>
-       <p>Relační databáze jak již bylo řečeno jsou nejpoužívanější datatáze, a to  kvůli tomu, že jsou snadno pochopitelné a jednoduché k sestrojení.
+       <p>Relační databáze, jak již bylo řečeno jsou dnes nejpoužívanější datatáze, a to  kvůli tomu, že jsou snadno pochopitelné a jednoduché k sestrojení.
         Je tu řada relačních SŘBD např. MySQL, Microsoft Access, MariaDB, Oracle, Firebird a další.
         Pro webové aplikace je nejpoužívanější MySQL v kombinaci s programovacím jazykem PHP.
        </p>
        <h3>Prvky Relační Databáze:</h3>
        <h4>Tabulky (entity)</h4>
-        <p>Tabulky jsou základem relační databáze. Tyto tabulky jsou na sebe nějakým způsobem zavislé, je mezi nimi relace (vzájemný vztah).Tabulky také nazývame jako <strong>entity</strong>. Entita je objekt reálného světa, která je schopna nezávislé existence, to může být např. zaměstnanec, auto, kniha, zakazník a tak podobně.</p>
+        <p>Tabulky jsou základem relační databáze. Tyto tabulky jsou na sebe nějakým způsobem závislé, je mezi nimi relace (vzájemný vztah).Tabulky také nazývame jako <strong>entity</strong>. Entita je objekt reálného světa, která je schopna nezávislé existence, to může být např. zaměstnanec, auto, kniha, zakazník a tak podobně.</p>
         <p>Entita může vypadat takto:</p>
         <img class ="tabulka"src="../img/fb.png" alt="etita(tabulka)">
        <h4>Sloupec tabulky (Atribut)</h4> 
-        <p>Tabulky se dělí na sloupce a řádky. Sloupce zastupují vlatnosti kontrétní entity (u zamětnance jak mužete vidět v přikladu nahoře to jsou atributy jmeno, prijmeni, email, telefon...). Tyto vlastnosti také nazýváme <strong>atributy</strong>.
+        <p>Tabulky se dělí na sloupce a řádky. Sloupce zastupují vlatnosti kontrétní entity (u zamětnance, jak můžete vidět v přikladu nahoře to jsou atributy jmeno, prijmeni, email, telefon...). Tyto vlastnosti také nazýváme <strong>atributy</strong>.
         Každý atribut musí mít jednoznačný název, rozsah a datavý typ.</p> 
         <h5>Záklaní datové typy</h5>   
         <ul>
           <li>INT - Celé číslo</li>
-          <li>DOUBLE - Desetiná čísla</li>
+          <li>DOUBLE - Desetinná čísla</li>
           <li>DATE - Datum ve formátu "RRRR-MM-DD"</li>
           <li>VARCAHR - Text o délce max. 255 znaků</li>
           <li>TEXT - Delší texty</li>
         </ul>
          <p>Další datové typy mužete vidět <a href="https://www.promotic.eu/cz/pmdoc/Subsystems/Db/MySql/DataTypes.htm">zde</a>.</p>
         <h4 >Řádky tabulky (záznamy)</h4>
-        <p>Řádky tabulky neboli záznamy jsou jeden konkrétní výpis daných atributů např. u tabulky zákazník by záznam byl.</p>
+        <p>Řádky tabulky neboli záznamy jsou jeden konkrétní výpis daných atributů např. u tabulky zákazník vypadá záznam takto.</p>
         <img class ="zaznam" src="../img/zaz.png"  alt="záznam">
         <h4>Klíče</h4>
         <h5>Primární klíč</h5>
-        <p>Primární klíč je atribut, který jednoznačně definuje jednotlivé záznamy. Obvykle bývá nějaké identifikační číslo, které se posouvá o jedno dopředu s každým záznamem. Jak vidíte na obrázku záznamu tak idZakazník je 1, to znamená že další záznam by byl idZakazník 2. Tuto funkci vám zajišťuje parament AUTO INCREMENT (AI).</p>
+        <p>Primární klíč je atribut, který jednoznačně definuje jednotlivé záznamy. Obvykle to bývá nějaké identifikační číslo, které se posouvá o jedno dopředu s každým záznamem. Jak vidíte na obrázku záznamu, tak idZakazník je 1, to znamená že další záznam by byl idZakazník 2. Tuto funkci zajišťuje parametr AUTO INCREMENT (AI).</p>
         <h5>Cizí klíče</h5>
         <p>Cizí klíč je primární klič z jiné tabulky. Jde o atribut, podle kterého poznáme jaké tabulky jsou spolu v relaci.</p>
       </div>  
@@ -76,20 +82,23 @@
         <h2>Vztahy mezi tabulkami</h2>
         <h3>Vztah 1:1</h3>
         <p>Tento vztah znamená, že jedné položce z první tabulky odpovída právě jedna položka z druhé tabulky.
-          Jako příkland může sloužit manžetsví (myslím ti u nás v ČR v jiných zemích to muže být jinak).
+          Jako příkland může sloužit manžetsví (myslím tím u nás v ČR v jiných zemích to může být jinak).
         </p>
-        <img class="one" src="" alt="Vztah 1:1">
+        <!-- Vkaládání brázeku na webu ze šložky img-->
+        <img class="one" src="../img/1ku1.png" alt="Vztah 1:1">
         <h3>Vztah 1:N</h3>
         <p>Tento vztah znamená, že jedné položce z první tabulky může odpovídat více položek z druhé tabulky.
-          Jako příklad použijeme zamětnance a úkol. Jeden zaměstnanec může mít více úkolu a jeden má jednoho zaměstnance.
+          Jako příklad použijeme zamětnance a úkol. Jeden zaměstnanec může mít více úkolu a jeden úkol má jednoho zaměstnance.
         </p>
-        <img class="oneN" src="" alt="Vztah 1:N">
+        <!-- Vkaládání brázeku na webu ze šložky img-->
+        <img class="oneN" src="../img/1N.png" alt="Vztah 1:N">
         <h3>Vztah M:N</h3>
-        <p>Tento vztah znamená, že více položek z první tabulky může odpovídat více položek z druhé tabulky.
-          Jako přiklad může dát vztah mezi autorem a knihou. Kniha muže mít více autorů a autor může mít více knih.
+        <p>Tento vztah znamená, že více položek z první tabulky může odpovídat více položkám z druhé tabulky.
+          Jako příklad může dát vztah mezi autorem a knihou. Kniha muže mít více autorů a autor může mít více knih.
           Jak vidíte na obrázku mezi knihou a autorem se vytvořila další tabulka, této tabulce se říká pomocná tabulka a tato tabulka bude zaznamenávat všechny autorovy knihy.
         </p>
-        <img class="MN" src="" alt="Vztah M:N">
+         <!-- Vkaládání brázeku na webu ze šložky img-->
+        <img class="MN" src="../img/MkuN.png" alt="Vztah M:N">
       </div>
     </div>
 </main>  
@@ -97,9 +106,9 @@
   <div class="Fcontent">
   <div class="udaje">
     <ul>
-      <li>Nazev práce: Webový průvodce návrhem databáze s typovími příklady </li>
+      <li>Název práce: Webový průvodce návrhem databáze s typovími příklady </li>
       <li>Autor: Petr Ďorď</li>
-      <li>Konzultant: Mgr.Petr Kozák</li>
+      <li>Konzultant: Mgr. Petr Kozák</li>
     </ul>
   </div>
   <div class="skola">

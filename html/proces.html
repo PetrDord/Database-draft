@@ -7,10 +7,16 @@
   </head>
   <body>
     <header>
-      <button class="toggel" aria-controls="navig" aria-expanded="false"><span class="sr-only">&#9776</span></button>
+        <!--Tlačítko pro hamburger menu v mobilní verzi webu
+      @aria-controls - Co konruluje pomocí id
+      @expanded - Jestli je menu vysunuto
+      -->
+      <button class="ham" aria-controls="menu" expanded="false">&#9776</button>
+      <!--Navigace stránky
+         @stav - Jestli je menu vysunuto -->
       <nav>
-        <ul id="navig" data-visible="false" class="links">
-          <li><a class="link" href="../index.html" >Home</a></li>
+        <ul id="menu" stav="false" class="links">
+          <li><a class="link" href="../index.html" >Úvod</a></li>
           <li><a class="link" href="zaklady.html">Základy</a></li>
           <li><a class="link" href="proces.html">Proces návrhu</a></li>
           <li><a class="link" href="dokonceni.html">Dokončení </a></li>
@@ -22,18 +28,19 @@
       <div class="text">
       <h1>Proces návrhu</h1>
       <h2>Co se v článku dozvíte?</h2>
+      
         <ul class="obash">
           <li><a href="#1">Zakladní zásady</a></li>
           <li><a href="#2">Účel databáze</a></li>
-          <li><a href="#3">Vyhledání informacích</a></li>
-          <li><a href="#4">Rozdělení informacích do tabulek</a</li>
+          <li><a href="#3">Vyhledání informací</a></li>
+          <li><a href="#4">Rozdělení informací do tabulek</a</li>
           <li><a href="#5">Vytvoření relací</a></li>
           <li><a href="#6">Normalizace databáze</a></li>
         </ul>
         <div id="1" class="block">
           <h2>Základní zásady</h2>
           <p>Při vytváření aplikace, která pracuje s daty, je jedním z nejdůležitějších kroků správný návrh systému pro ukládání dat.
-            Pro ukládání dat, je nejlepší využít nějaký databázový systém, o kterých jsem si říkali na stránce Základy. Optimálním návrhem databáze se zabívá spousta teorií, ale pro běžné aplikace stačí pouze použít selský rozum a několik zásad.
+            Pro ukládání dat, je nejlepší využít nějaký databázový systém, o kterém jsme si říkali na stránce Základy. Optimálním návrhem databáze se zabývá spousta teorií, ale pro běžné aplikace stačí pouze použít selský rozum a několik zásad.
           </p>
           <ol>
             <li>Hodnoty v tabulkách by měli být nedělitelné.</li>
@@ -49,29 +56,30 @@
           </p>
        </div>
        <div id="3" class="block">
-        <h2 >Vyhledáni informací</h2>
-        <p>Dalším krokem při návrhu je vytvořit seznam údajů, které budeme evidovat. Tyto údaje bývají součástí reálného světa a k nim vytváříme seznam informací, které tyto údaje obsahují. Jako příklad si opět můžeme vzít knihovnu; knihovna obashuje knihy a kniha má nějaké informace, které chceme zaznamenávat např. autora, počet stran, rok vydání, žánr... .
+        <h2 >Vyhledávání informací</h2>
+        <p>Dalším krokem při návrhu je vytvořit seznam údajů, které budeme evidovat. Tyto údaje bývají součástí reálného světa a k nim vytváříme seznam informací, které tyto údaje obsahují. Jako příklad si opět můžeme vzít knihovnu; knihovna obsahuje knihy a kniha má nějaké informace, které chceme zaznamenávat např. autora, počet stran, rok vydání, žánr... .
        </div> 
        <div id="4" class="block">
-         <h2>Rozdělení informacích do tabulek</h2>
-         <p>Další krok je určit jednotlivé entity (tabulky) databáze. Nejlepší je začít u entit, které plynou z předchozích kroků. Jako náš přiklad opět využiji lehkou databázi knihovny, takovou to databázi můžeme rozdělit na entity Kniha, Autor a Čtenář.
+         <h2>Rozdělení informací do tabulek</h2>
+         <p>Další krok je určit jednotlivé entity (tabulky) databáze. Nejlepší je začít u entit, které plynou z předchozích kroků. Jako náš příklad opět využiji lehkou databázi knihovny, takovou to databázi můžeme rozdělit na entity Kniha, Autor a Čtenář.
            Tyto entity budou obsahovat atributy podle toho, co vše je potřeba evidovat. Můžeme si tyto atributy tabulek zapsat: </p>
            <br>
-          <p>Kniha(nazev, počet stran, popis, datum pujčení, termín vrácení, stav(pujčeno, vráceno))</p>
+          <p>Kniha (název, počet stran, popis, datum půjčení, termín vrácení, stav (půjčeno, vráceno))</p>
           <br>
-          <p>Autor(jméno)</p>
+          <p>Autor (jméno)</p>
           <br>
-          <p>Čtenář(jméno, telefon, email, adresa, datum narození) </p>
+          <p>Čtenář (jméno, telefon, email, adresa, datum narození) </p>
           <br>
-          <p>Důvod proč jsme z autora udělami vlatní entitu je aby jsme dodržely 4. zásadu při návrhu databáze - Data kromě odkazů na primární klíč by měla být uložena pouze jednou.  </p>
+          <p>Důvod, proč jsme z autora udělali vlastní entitu, je aby jsme dodržely 4. zásadu při návrhu databáze - Data kromě odkazů na primární klíč by měla být uložena pouze jednou.  </p>
           <h3>Určení primárních klíčů</h3>
           <p>Teď je načase si určit primární klíče našich entit. Jak jsme si již říkali na minulé stránce primární klíče často bývají identifikační čísla, které se o jednu zvyšují z každým záznamem.
             Tento styl primárních klíčů bude platit i u naších entit, protože nemají lepší jednoznačný identifikátor.
           <h3>Vytvoření tabulek</h3>
-          <p>Ještě než vám ukáži, jak se tabulky vytváří je důležíte dbát na naše základní zásady. U entity autor a čtenár budeme uvádět atribut jméno, ale aby jsme dodržely 1.zásadu. tak jej musíme rozdělit na atributy jméno a přijmení. To samá platí u atributu adresa, který musíme rozdělit na ulici, číslo popisné (ČP), PSČ, město. 
-            Pokud jsme si tohoto vědomi můžeme začít vytvářet tabulky. Dole uvidíte video, kde vám ukáži, jak se tabulky vytvářejí a jak se vnich výtvářejí atributy, ve videu budu použivat software <a href="https://www.mysql.com/products/workbench/">MySQL workbench</a>.</p>
+          <p>Ještě než vám ukáži, jak se tabulky vytváří je důležíte dbát na naše základní zásady. U entity autor a čtenář, budeme uvádět atribut jméno, ale aby jsme dodržely 1. zásadu, tak jej musíme rozdělit na atributy jméno a příjmení. To samé platí u atributu adresa, který musíme rozdělit na ulici, číslo popisné (ČP), PSČ, město. 
+            Pokud jsme si tohoto vědomi můžeme začít vytvářet tabulky. Dole uvidíte video, kde vám ukáži, jak se tabulky vytvářejí a jak se v vnich výtvářejí atributy, ve videu budu používat software <a href="https://www.mysql.com/products/workbench/">MySQL workbench</a>.</p>
        </div>
        <div class="block">
+        <!--Vkládání videa na stránku ze složky videos-->
        <video controls width="100%">
         <source src="../videos/1.m4v" type="video/mp4">
         Toto nejde přehrát.
@@ -79,13 +87,14 @@
       </div>
        <div id="5" class="block">
         <h2>Vytvoření relací</h2>
-        <p>Když už máme naše tabulky, tak nás čeká další důležítý krok, vytvoření relací (vztahů) mezi tabulkami. Nejdříve musíme zjistit, jaký mají data z jedné tabulky vztah k datům z druhé tabulky a podle toho určit vazbu mezi nimi.
-         Např. u našich tabulek kniha a čtenář  můžeme vyjádřit vztah mezi jejich daty takto:"Jeden čtenář si může půjčit více knih, ale jedna kniha může být půjčena pouze jedním čtenářem". To znamená že relace mezi těmito entitami je 1:N.
-         Další relace je mezi tabulkami kniha a autor, vztah mezi těmito tabulkami lze vyjádřit takto:"Kniha může mít více autorů a autor může mít více knih". To znamená že relace mezi těmoto entitami je M:N. Mezi tabulkami autor a čtenář není žádná logická vazba.
-         Pod tímto textem najdete další video ukázku, kde uvidíte jak se tyto relace vytvářejí.
+        <p>Když už máme naše tabulky hotové, tak nás čeká další důležitý krok, vytvoření relací (vztahů) mezi tabulkami. Nejdříve musíme zjistit, jaké mají data z jedné tabulky vztah k datům z druhé tabulky a podle toho určit vazbu mezi nimi.
+         Např. u našich tabulek kniha a čtenář  můžeme vyjádřit vztah mezi jejich daty takto:"Jeden čtenář si může půjčit více knih, ale jedna kniha může být půjčena pouze jedním čtenářem". To znamená, že relace mezi těmito entitami je 1:N.
+         Další relace je mezi tabulkami kniha a autor, vztah mezi těmito tabulkami lze vyjádřit takto:"Kniha může mít více autorů a autor může mít více knih". To znamená, že relace mezi těmoto entitami je M:N. Mezi tabulkami autor a čtenář není žádná logická vazba.
+         Pod tímto textem najdete další videoukázku, kde uvidíte, jak se tyto relace vytvářejí.
         </p>
       </div>
       <div class="block">
+        <!--Vkládání videa na stránku ze složky videos-->
         <video controls width="100%"> 
           <source src="../videos/2.m4v" type="video/mp4">
           Toto nejde přehrát.
@@ -93,15 +102,15 @@
        </div>
        <div id="6" class="block">
          <h2>Normalizace databáze</h2>
-         <p>Jako další krok můžeme použít pravidla pro normalizaci. Normalizaci používáme abysme upravili náš návrh databáze a to tak zvýšili přehlednost databáze, dstranili redundantní (opakující) data a zlepšili její výkon.
+         <p>Jako další krok můžeme použít pravidla pro normalizaci. Normalizaci používáme, abychom upravili náš návrh databáze a to tak, abychom zvýšili přehlednost databáze, odstranili redundantní (opakující) data a zlepšili její výkon.
            Pravidla normalizace se nazývají normální formy (NF).
          </p>
-         <h3>1.NF</h3>
+         <h3>1. NF</h3>
          <p>Všechny hodnoty mají být atominké. Hodnoty atributů musí obsahovat nedělitelné hodnoty. Toto jsme jsi již ukazovali, když jsme dělili adresu (ulici, číslo popisné...). Toto pravidlo se dodržuje z důvodu lepšího vyhledání informací z databáze.</p>
-         <h3>2.NF</h3>
-         <p>Neklíčové atributy musí být zavislé na primátním klíči. Např. dávat atrubit jmeno čtenáře do tabulky kniha, protože tento atribut nesouvisí s primárním klíčem idkniha. Místo toho vytvoříme tabulku čtenář, kde jej budem evidovat a bude sousviset s jejím primárním klíčem.</p>
-         <h3>3.NF</h3>
-         <p>Žádný neklíčový atribut není tranzitivně zavislí na klíči. Tranzativní závislost je závislost mezi dvěma nebo více atrubuty a klíčem, kde jeden atribut je zavislí na klíči a druhý je zavislí na prvním atributu. Tento problém se vyřeší, tak že se udělá nová tabulka, která bude obsahovat atributy, které jsou na sebe závíslé a vytvoří se relace relace s tabulkou, kde byly půbodně.  Tuto formu není vždy nutné dodržovat.
+         <h3>2. NF</h3>
+         <p>Neklíčové atributy musí být zavislé na primátním klíči. Např. dávat atrubit jméno čtenáře do tabulky kniha, protože tento atribut nesouvisí s primárním klíčem idkniha. Místo toho vytvoříme tabulku čtenář, kde jej budem evidovat a bude sousviset s jejím primárním klíčem.</p>
+         <h3>3. NF</h3>
+         <p>Žádný neklíčový atribut není tranzitivně zavislí na klíči. Tranzativní závislost je závislost mezi dvěma nebo více atrubuty a klíčem, kde jeden atribut je zavislí na klíči a druhý je zavislí na prvním atributu. Tento problém se vyřeší, tak že se udělá nová tabulka, která bude obsahovat atributy, které jsou na sebe závíslé a vytvoří se relace s tabulkou, kde byly půbodně.  Tuto formu není vždy nutné dodržovat.
            </p>
        </div>
       <div class="block">
@@ -114,9 +123,9 @@
   <div class="Fcontent">
   <div class="udaje">
     <ul>
-      <li>Nazev práce: Webový průvodce návrhem databáze s typovími příklady </li>
+      <li>Název práce: Webový průvodce návrhem databáze s typovími příklady </li>
       <li>Autor: Petr Ďorď</li>
-      <li>Konzultant: Mgr.Petr Kozák</li>
+      <li>Konzultant: Mgr. Petr Kozák</li>
     </ul>
   </div>
   <div class="skola">
